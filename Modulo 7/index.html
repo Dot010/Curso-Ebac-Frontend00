@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faixa de Crédito para Empréstimos</title>
+    <link rel="stylesheet" href="/emp.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>EBAC Banking</h1>
+        <h2>Empréstimos</h2>
+        <form id="form-solicitar">
+            <input type="number" id="valor-Min" required placeholder="Valor Mínimo Solicitado"/>
+            <p class="error-Min">
+                O Valor precisa ser de no minimo 4 Digitos
+            </p>
+            <input type="number" id="valor-Max" required placeholder=" Valor Máximo Solicitado"/>
+
+            <p class="error-Max">
+                O Valor precisa ser de no maximo 6 Digitos
+            </p>
+            <button id="btn-solicitar" type="submit">Solicitar</button>
+        </form>
+        <p class="mensagem-final"></p>
+    </div>
+    <script src="./emp.js"></script>
+
+    
+
+
+
+    </div>
+</body>
+</html>
