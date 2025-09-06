@@ -1,0 +1,186 @@
+/* RESET E ESTILIZAÇÃO BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"TASA Explorer", sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* HEADER */
+header {
+    max-height: 62px;
+    background-color: #b30000;
+    color: #fff;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SOBRE A LOJA */
+.sobre {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.sobre img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.sobre div {
+    width: 50%;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+/* PRODUTOS */
+.produtos {
+    margin-top: 40px;
+}
+
+.produtos {
+    display: flex;
+    gap: 20px;
+}
+
+.produto {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    flex: 1;
+}
+
+.produto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #b30000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #800000;
+}
+
+/* MOBILE - até 640px */
+@media (max-width: 640px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .produtos {
+        flex-direction: column;
+    }
+}
+
+            /* Tablet - até 1023 */
+@media (min-width: 641px) and (max-width: 1023px) {
+
+    header .container {
+        max-height: 62px;
+        text-align: center;
+    }
+
+    header nav ul {
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .produtos {
+  display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+
+
+/* DESKTOP - a partir de 1024px */
+@media (min-width: 1024px) {
+    .sobre {
+        flex-direction: row;
+    }
+
+    .sobre img {
+        width: 300px;
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
