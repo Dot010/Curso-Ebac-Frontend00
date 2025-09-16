@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Institucional</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans", sans-serif;
+        }
+
+        #carousel-inicio .carousel-item img {
+            width: 100%;
+            /* ocupa toda a largura */
+            height: 500px;
+            /* define a altura */
+            object-fit: cover;
+            /* recorta a imagem sem distorcer */
+        }
+
+        #carousel-inicio .carousel-caption {
+            background: rgba(0, 0, 0, 0.6);
+            /* fundo preto transparente */
+            padding-bottom: 10%;
+            border-radius: 12px;
+            /* bordas arredondadas */
+
+        }
+
+        .card-hover {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #fff;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            /* tamanho da linha */
+            height: 4px;
+            /* espessura */
+            background-color: #0d6efd;
+            /* cor (aqui peguei o azul padrão do Bootstrap) */
+            margin: 8px auto 0;
+            /* centraliza abaixo do h2 */
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Elevare</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary btn-sm mx-1" href="#inicio"
+                            onclick="scrollToSection('inicio'); return false">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary btn-sm mx-1" href="#sobre"
+                            onclick="scrollToSection('sobre'); return false">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary btn-sm mx-1" href="#servicos"
+                            onclick="scrollToSection('servicos'); return false">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary btn-sm mx-1" href="#contato"
+                            onclick="scrollToSection('contatos'); return false">Contato</a>
+                    </li>
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn btn-link btn-sm">
+                            Mais</button>
+                        <button class="btn btn-primary btn btn-link btn-sm dropdown-toggle dropdown-toggle-split"
+                            data-bs-toggle="dropdown"></button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li class="dropdown-item">
+                                <a href="https://site-pessoal-snowy.vercel.app/">Landing page</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="https://github.com/Dot010/Curso-Ebac-Frontend00">GitHub</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#">Linkedin</a>
+                            </li>
+                        </ul>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Início -->
+    <section id="inicio" class="text-center pb-5 bg-light">
+        <div id="carousel-inicio" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-inicio" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel-inicio" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-inicio" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img class="d-block w-100"
+                        src="https://pixabay.com/get/gf12afad0add24c6b460175a16ec292a7c4c7a67945b2d99fe7ab34eb0e9dad42884fdec4c5dc4b3a34594a2bef96383235e2a4d541e320b752acde4eb6714a4d_1280.jpg"
+                        alt="Programacao">
+                    <div class="carousel-caption">
+                        <h2 class="display-4">Transformando Ideias em Soluções</h2>
+                        <p class="lead">Na Elevare, transformamos suas ideias em projetos digitais de alta qualidade e
+                            impacto.</p>
+                        <a class="btn btn-lg btn-info text-white fw-bold rounded shadow-l" href="#contato"
+                            onclick="scrollToSection('contato'); return false">Peça seu projeto</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img class="d-block w-100"
+                        src="https://pixabay.com/get/g8f640eaa8efa65699bd624a4325313d9f1d1725142c44b1e655cb1b4da57becf76e907e8af2ac7ec9910c82e9abec56d_1920.jpg"
+                        alt="Programacao">
+                    <div class="carousel-caption">
+                        <h2 class="display-4">Marketing Digital Inteligente</h2>
+                        <p class="lead">Alcance seu público-alvo com estratégias modernas que geram resultados reais.
+                        </p>
+                        <a class="btn btn-lg btn-info text-white fw-bold rounded shadow-l" href="#contato"
+                            onclick="scrollToSection('contato'); return false">Solicite uma consultoria</a>
+                        </li>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img class="d-block w-100"
+                        src="https://pixabay.com/get/g10e8f438237d75dbda6a788b63316464a5a35e8054295f062b477488e1f38b6d78fa58647f1c36cefa7fda3d6e70a83f_1920.jpg"
+                        alt="Programacao">
+                    <div class="carousel-caption">
+                        <h2 class="display-4">Desenvolvimento Web</h2>
+                        <p class="lead">Oferecemos soluções de qualidade para o seu negócio.</p>
+                        <a class="btn btn-lg btn-info text-white fw-bold rounded shadow-l" href="#contato"
+                            onclick="scrollToSection('contato'); return false">Agende uma reunião</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-inicio" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-inicio" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+   <section id="servicos" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center pb-5 section-title">Serviços</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card card-hover h-100 text-center">
+                    <img src="https://pixabay.com/get/gedaaf34b0dae9910405206c34ec9d7a1a4e9e52b074405cb8dda32aceb6480a688bc00437f16f2d48dcdd348a7e14af5425f4427784b25f98f4be9415739579e_1280.png" 
+                         class="card-img-top" alt="Desenvolvimento Web">
+                    <div class="card-body">
+                        <h5 class="card-title">Desenvolvimento Web</h5>
+                        <p class="card-text">Criação de sites modernos e responsivos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card card-hover h-100 text-center">
+                    <img src="https://pixabay.com/get/gd23957cd05c6f78a0807806ac68df679d4cb9cbb46a1e1360cd466299a6146a65e180032006c2b7f8810d328cf17e1f60ef4b6acc31e623963dcc46211e8a6f7_1280.jpg" 
+                         class="card-img-top" alt="Marketing Digital">
+                    <div class="card-body">
+                        <h5 class="card-title">Marketing Digital</h5>
+                        <p class="card-text">Estratégias para aumentar sua presença online.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card card-hover h-100 text-center">
+                    <img src="https://pixabay.com/get/g500f42e4ffbe8574d198fb31f01ddd1f5ffaa4a991388d248cc590978f51687deb5d87a9f26a5adf70795c0e7a8d8aad18c33051d6c1811957bcba08e5f7e0c9_1280.jpg" 
+                         class="card-img-top" alt="Consultoria">
+                    <div class="card-body">
+                        <h5 class="card-title">Consultoria</h5>
+                        <p class="card-text">Auxílio especializado para o crescimento da sua empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Seção Sobre -->
+    <section id="servicos" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Sobre nos</h2>
+                    <p class="lead">Fundada em 2020, a Elevare nasceu com o objetivo
+                        de levar inovação e soluções tecnológicas para empresas de todos os portes. Nosso foco é
+                        transformar ideias em resultados concretos, construindo parcerias duradouras com ética,
+                        transparência e compromisso com a excelência.</p>
+                    <p>A Elevare é uma empresa que une tecnologia e inovação para transformar
+                        negócios. Oferecemos soluções personalizadas em desenvolvimento web, marketing digital e
+                        consultoria estratégica, sempre focando em qualidade, eficiência e resultados reais para
+                        nossos clientes.</p>
+                </div>
+            
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="card card-hover text-center p-3">
+
+                        <div class="card-body">
+                            <img src="/Curso-Ebac-Frontend00/Bootstrap avancado/dot.png" class="card-img-top my-3" alt="Imagem 2">
+                        </div>
+    </section>
+
+
+    <!-- Seção Contato -->
+    <section id="contato" class="py-5">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Email: contato@minhaempresa.com</p>
+            <p>Telefone: (00) 0000-0000</p>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS opcional -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
