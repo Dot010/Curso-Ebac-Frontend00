@@ -1,0 +1,26 @@
+
+.navbar li a {
+    color:#000;
+}
+
+.nav-link{
+
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover{
+    color: #ffc107;
+}
+.carousel-item img {
+    height: 500px; /* ou o tamanho que você quiser */
+    object-fit: cover; /* recorta mantendo o enquadramento */
+}
+
+.carousel-caption{
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.text-colored{
+   color: #ffc107;
+}
