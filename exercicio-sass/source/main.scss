@@ -1,0 +1,106 @@
+// Importando arquivos
+@use './config/variaveis';
+@use './config/reset';
+@use "sass:color";
+
+header {
+
+
+    background-color: variaveis.$primary-color;
+    color: white;
+    padding: 20px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .branding {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 40%;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        img {
+            width: 120px;
+            height: auto;
+        }
+    }
+
+    nav ul.menu {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin-right: 100px;
+
+
+        li a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}
+
+// Produtos
+
+
+section h2 {
+    padding-top: 48px;
+  text-align: center;
+  margin-bottom: 20px; // opcional, para dar espaço abaixo
+}
+        
+        
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px 0;
+    list-style: none;
+   
+
+    .product-item {
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+        
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        h4 {
+            margin: 10px 0 5px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .product-button {
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: variaveis.$secondary-color;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+            
+
+            &:hover {
+                 background-color: color.adjust(variaveis.$secondary-color, $lightness: -10%);
+            }
+        }
+    }
+}
